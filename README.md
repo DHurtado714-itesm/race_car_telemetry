@@ -7,7 +7,7 @@ Instituto Tecnológico de Estudios Superiores de Monterrey, campus Querétaro
 
 Carlos Salguero ~ A00833341
 <br>
-Daniel Hurtado ~
+Daniel Hurtado ~ A01707774
 <br>
 Daniel Cajas ~
 <br>
