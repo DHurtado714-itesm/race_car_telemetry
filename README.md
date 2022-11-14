@@ -11,7 +11,7 @@ Daniel Hurtado ~
 <br>
 Daniel Cajas ~
 <br>
-Dante Pérez ~
+Dante Pérez ~ A01709226
 
 # Proyecto
 
