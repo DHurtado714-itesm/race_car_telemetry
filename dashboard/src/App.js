@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react"
+import { Routes, Route } from "react-router-dom"
+
+// Components
+import Topbar from "./components/Topbar/topbar"
+import CustomSidebar from "./components/Sidebar/sidebar"
+import Dashboard from "./Pages/Dashboard/dashboard"
+
+// theme
+import { CssBaseline, ThemeProvider } from "@mui/material"
+import { ColorModeContext, useMode } from "./theme"
+
+// Styles
+import "./Styles/app.css"
 
 function App() {
+  const [theme, colorMode] = useMode()
+  const [isSidebar, setIsSidebar] = useState(true)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+
+        {/* Layout */}
+        <div className="app">
+          <CustomSidebar isSidebar={isSidebar} setIsSidebar={setIsSidebar} />
+
+          <main className="content">
+            <Topbar setIsSidebar={setIsSidebar} />
+
+            <Routes>
+              <Route path="/" element={<Dashboard />} />
+            </Routes>
+          </main>
+        </div>
+      </ThemeProvider>
+    </ColorModeContext.Provider>
+  )
 }
 
-export default App;
+export default App
