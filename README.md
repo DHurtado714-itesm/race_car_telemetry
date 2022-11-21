@@ -13,25 +13,17 @@ Daniel Cajas ~
 <br>
 Dante Pérez ~
 
-# Proyecto
-
-## Analisis del problema
-
-### Contexto
-
-Electrum es una escuderia formada por estudiantes de profesional del Tecnológico de Monterrey. Compite
-en Electraton, una competencia enfocada en impulsar la construcción de autos eléctricos a pequeña
-escala. Para mejorar el rendimiento del kart y del piloto, es necesario llevar un registro de
-diferentes parámetros como tiempos de vuelta, temperatura del motor, entre otros.
-
-Nuestro proyecto tiene como objetivo implementar un circuito con el Node MCU como computadora central
-para registrar los datos y enviarlos a una base de datos local. Luego, mostrar en tiempo real los
-valores de los parámetros en un dashboard digitial para que el equipo de los pits conozca la
-condición del kart y, así determinar una estrategia.
-
 ## Dashboard Digital
 
-Consiste en una página web creada con React para desplegar los valores de posición inicial, un mapa
-con los valores de posición registrados, la temperatura del motor, el número de vueltas así como los
-tiempos de las últimas tres vueltas y la vuelta con mejor tiempo y los valores de velocidad y
-aceleración instantánea.
+El dashboard digital del grupo estudiantil Electrum del Tecnologico de Monterrey,
+campus Queretaro muestra los valores de ubicacion, numero de vueltas, temperatura del
+motor, velocidad actual, un grafico de dispersion con puntos de GPS de la pista,
+el valor de latitude y longitud de donde la carrera empezo y estadisticas generales
+del equipo.
+
+Los datos son recolectados a traves de sensores en el coche monoplaza y son almacenados
+en una database local. Estos datos son recolectados por medio de queries a la pagina web.
+
+La sidebar del proyecto permite ver las graficas de posicion, velocidad, temperatura
+y race stats generales muestran los datos en forma de grafico. Por ultimo, se muestran
+los valores en formato RAW (sin procesar) en formato de tablas.
