@@ -14,6 +14,7 @@ import { ColorModeContext, useMode } from "./theme"
 import "./Styles/app.css"
 
 function App() {
+  console.log(process.env.REACT_APP_O)
   const [theme, colorMode] = useMode()
   const [isSidebar, setIsSidebar] = useState(true)
 

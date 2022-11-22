@@ -1,39 +1,48 @@
-import React, { useState, useEffect } from "react"
-// react weather components
-import { ReactWeather, useOpenWeather } from "react-open-weather"
+import { Typography, Box } from "@mui/material"
+import { useState, useEffect } from "react"
 
 const Weather = () => {
-  const [lat, setLat] = useState(0)
-  const [long, setLong] = useState(0)
+  const [lat, setLat] = useState(null)
+  const [lon, setLon] = useState(null)
+  const [weather, setWeather] = useState(null)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(function (position) {
-      setLat(position.coords.latitude)
-      setLong(position.coords.longitude)
+    async function fetchAPI() {
+      navigator.geolocation.getCurrentPosition(function (position) {
+        setLat(position.coords.latitude)
+        setLon(position.coords.longitude)
+      })
 
-      console.log("Latitude: ", lat)
-      console.log("Longitude: ", long)
-    })
-  }, [lat, long])
+      if ((lat, lon)) {
+        try {
+          const fetchUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
 
-  const { data, isLoading, errorMessage, lang } = useOpenWeather({
-    key: "896b72d256039e0e52fb67b7a25e591e",
-    lat: lat,
-    long: long,
-    lang: "en",
-    unit: "standard",
-  })
+          const res = await fetch(fetchUrl)
+          const data = await res.json()
+          setWeather(data)
+          setIsLoading(false)
+        } catch (error) {
+          setIsLoading(false)
+          console.log("error: ", error)
+        }
+      }
+    }
+    fetchAPI()
+  }, [lat, lon])
 
   return (
-    <ReactWeather
-      isLoading={isLoading}
-      errorMessage={errorMessage}
-      data={data}
-      lang={lang}
-      locationLabel="Current Position"
-      unitsLabel={{ tempetarure: "C", windSpeed: "km/h" }}
-      showForecast
-    />
+    <Box>
+      {isLoading ? (
+        <Typography>Loading...</Typography>
+      ) : (
+        <Box>
+          <Typography variant="h4">
+            {weather.name}: {weather.main.temp}°C
+          </Typography>
+        </Box>
+      )}
+    </Box>
   )
 }
 

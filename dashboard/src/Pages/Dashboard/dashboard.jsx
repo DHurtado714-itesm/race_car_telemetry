@@ -10,6 +10,7 @@ import TemperatureOutliend from "@mui/icons-material/ThermostatOutlined"
 import Header from "../../components/Header/header"
 import Time from "../../components/Timestamp/time"
 import StatBox from "../../components/Stats/stats"
+import Weather from "../../components/Weather/weather"
 
 // theme
 import { tokens } from "../../theme"
@@ -27,9 +28,8 @@ const Dashboard = () => {
         <Header title="Electrum Racing Qro" subtitle="Welcome, D. Hurtado" />
         <Box justifyContent="flex-end">
           <Time display="flex" padding="10px 0" />
-          <Typography variant="h4">Weather: </Typography>
+          <Weather />
         </Box>
-        {/* <Weather /> */}
       </Box>
 
       {/* Grid and Charts */}
