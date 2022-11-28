@@ -9,7 +9,7 @@ Carlos Salguero ~ A00833341
 <br>
 Daniel Hurtado ~ A01707774
 <br>
-Daniel Cajas ~
+Daniel Cajas ~ A01708637
 <br>
 Dante Pérez ~
 
@@ -35,3 +35,16 @@ Consiste en una página web creada con React para desplegar los valores de posic
 con los valores de posición registrados, la temperatura del motor, el número de vueltas así como los
 tiempos de las últimas tres vueltas y la vuelta con mejor tiempo y los valores de velocidad y
 aceleración instantánea.
+
+## Base de datos
+
+Consiste en una abse de datos en phpMyAdmin hosteada localmente con XAMPP. El controlador solo corre el archivo sendData.php. Este archivo, al igual que setup.php y config.php deben estar en el servidor. Si se requie cambiar la base de datos, tabla o carrera de la cual se estan enviando los se debe de cambiar el archivo config.php.
+
+## Implementación Física
+
+EL controlador a utilizar es el NodeMCU ESP8266. Este está conectado a los sensores DHT22 de temperatura y humedad y al Neo6MV2 de GPS. Decodifica los datos y envía a la base de datos temperatura, latitud, longitud, altura y velocidad. Para configurar la red a conectar, ubicación de los scripts php, ip del servidor y puerto de la base de datos solo se deben cambiar las constantes al principio del programa FINAL.ino.
+
+## NodeMCU
+
+EL programa esta subdividido en cuatro principales secciones. Al principio se establecen las constantes para conectarse al servidos y se inicializan los sensores, al igual que se importan las librerías necesarias. Luego tenemos dos funciones, getGPSData que se encarga de la decodificación de las oragiones del GPS y sendData que abre el script snedData.php y le envía los datos temperatura, latitud, longitud, altura y velocidad.
+
