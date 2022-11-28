@@ -1,6 +1,11 @@
 import { Typography, Box } from "@mui/material"
 import { useState, useEffect } from "react"
 
+/**
+ * @brief
+ * Gets the current weather from Open Weather API
+ * @returns {JSX.Element} Weather component
+ */
 const Weather = () => {
   const [lat, setLat] = useState(null)
   const [lon, setLon] = useState(null)

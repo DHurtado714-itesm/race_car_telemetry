@@ -15,6 +15,11 @@ import SearchIcon from "@mui/icons-material/Search"
 // theme
 import { ColorModeContext, tokens } from "../../theme"
 
+/**
+ * @brief
+ * Topbar component for the dashboard
+ * @returns {JSX.Element} Topbar component
+ */
 const Topbar = () => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)

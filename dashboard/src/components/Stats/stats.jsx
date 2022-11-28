@@ -4,6 +4,12 @@ import { Box, Typography, useTheme } from "@mui/material"
 // theme
 import { tokens } from "../../theme"
 
+/**
+ * @brief
+ * Stats component for the dashboard
+ * @param {Object} props
+ * @returns {JSX.Element} Stats component
+ */
 const StatBox = ({ title, subtitle, icon, progress, left }) => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)

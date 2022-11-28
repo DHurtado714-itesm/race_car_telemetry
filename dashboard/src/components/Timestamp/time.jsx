@@ -3,7 +3,12 @@ import React from "react"
 // mui components
 import { Typography } from "@mui/material"
 
-// Class used for showing current date and time
+/**
+ * @brief
+ * Timestamp component for the dashboard
+ * @param {Object} props
+ * @returns {JSX.Element} Timestamp component
+ */
 class Time extends React.Component {
   constructor(props) {
     super(props)

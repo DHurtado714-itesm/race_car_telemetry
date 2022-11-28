@@ -3,11 +3,11 @@ import { useEffect, useState } from "react"
 /**
  * @brief
  * Uses an API way of getting data from the backend server.
+ * @return {Object} The data from the backend server.
  */
 export default function BackendAPI() {
   const [data, setData] = useState(null)
   const [isPending, setIsPending] = useState(true)
-  let dataArray = new Object()
 
   useEffect(() => {
     async function fetchAPI() {
@@ -27,9 +27,5 @@ export default function BackendAPI() {
     fetchAPI()
   }, [])
 
-  for (let i = 0; i < data.length; i++) {
-    dataArray[i] = data[i]
-  }
-
-  return dataArray
+  return { data, isPending }
 }

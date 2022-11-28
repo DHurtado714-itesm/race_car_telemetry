@@ -3,6 +3,12 @@ import { Typography, Box, useTheme } from "@mui/material"
 // theme
 import { tokens } from "../../theme"
 
+/**
+ * @brief
+ * Header component for the dashboard
+ * @param {Object} props
+ * @returns {JSX.Element} Header component
+ */
 const Header = ({ title, subtitle }) => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)
