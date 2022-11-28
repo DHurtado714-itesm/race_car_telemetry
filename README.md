@@ -12,7 +12,7 @@ Pedro Nájera García - Mtro
 ## Integrantes
 
 Carlos Salguero ~ A00833341 \
-Daniel Hurtado ~ \
+Daniel Hurtado ~ A01707774
 Daniel Cajas ~ A01708637 \
 Dante Peréz ~
 
