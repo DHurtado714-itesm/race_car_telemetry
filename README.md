@@ -1,29 +1,29 @@
 # Datos Generales
 
-TC1004B.501 - Implementacion de Internet de las Cosas <br>
-Instituto Tecnológico de Estudios Superiores de Monterrey, campus Querétaro
+Instituto Tecnológico de Estudios Superiores de Monterrey, campus Querétaro \
+Proyecto Integrador de la materia TC1004B.501 - Implementación de Internet de las Cosas
+
+## Profesores
+
+Eberth Manjarrez Quintanilla - ISC \
+Rodrigo Sanchez Luna - Mtro \
+Pedro Nájera García - Mtro
 
 ## Integrantes
 
-Carlos Salguero ~ A00833341
-<br>
-Daniel Hurtado ~ A01707774
-<br>
-Daniel Cajas ~
-<br>
-Dante Pérez ~
+Carlos Salguero ~ A00833341 \
+Daniel Hurtado ~ A01707774 \
+Daniel Cajas ~ A01708637 \
+Dante Peréz ~
+
+## Contexto
+
+Electrum es una escuderia formada por estudiantes de profesional del Tecnológico de Monterrey. Compite en Electraton, una competencia enfocada en impulsar la construcción de autos eléctricos a pequeña escala. Para mejorar el rendimiento del kart y del piloto, es necesario llevar un registro de diferentes parámetros como tiempos de vuelta, temperatura del motor, entre otros.
+
+Nuestro proyecto tiene como objetivo implementar un circuito con el Node MCU como computadora central para registrar los datos y enviarlos a una base de datos local. Luego, mostrar en tiempo real los valores de los parámetros en un dashboard digitial para que el equipo de los pits conozca la condición del kart y, así determinar una estrategia.
 
 ## Dashboard Digital
 
-El dashboard digital del grupo estudiantil Electrum del Tecnologico de Monterrey,
-campus Queretaro muestra los valores de ubicacion, numero de vueltas, temperatura del
-motor, velocidad actual, un grafico de dispersion con puntos de GPS de la pista,
-el valor de latitude y longitud de donde la carrera empezo y estadisticas generales
-del equipo.
-
-Los datos son recolectados a traves de sensores en el coche monoplaza y son almacenados
-en una database local. Estos datos son recolectados por medio de queries a la pagina web.
-
-La sidebar del proyecto permite ver las graficas de posicion, velocidad, temperatura
-y race stats generales muestran los datos en forma de grafico. Por ultimo, se muestran
-los valores en formato RAW (sin procesar) en formato de tablas.
+En este proyecto de Implementación de Internet de las Cosas estamos desarrollando
+un dashboard digital para el grupo estudiantil Electrum del Tecnologico de Monterrey,
+campus Queretaro.
