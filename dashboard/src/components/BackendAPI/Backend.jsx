@@ -16,7 +16,6 @@ export default function BackendAPI() {
         const res = await fetch(fetchURL)
         const data = await res.json()
 
-        console.log(data)
         setData(data)
         setIsPending(false)
       } catch (err) {

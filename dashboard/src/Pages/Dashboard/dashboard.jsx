@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 // mui components
 import { Box, Typography, useTheme } from "@mui/material"
 
@@ -12,8 +11,7 @@ import Header from "../../components/Header/header"
 import Time from "../../components/Timestamp/time"
 import StatBox from "../../components/Stats/stats"
 import Weather from "../../components/Weather/weather"
-import PositionGraph from "../../components/PositionGraph/PositionGraph"
-import BackendAPI from "../../components/GetBackendAPI/BackendAPI"
+import BackendAPI from "../../components/BackendAPI/Backend"
 
 // theme
 import { tokens } from "../../theme"
@@ -27,28 +25,10 @@ import { SpeedOutlined } from "@mui/icons-material"
 const Dashboard = () => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)
-  // const [data, setData] = useState(null)
-  // const [isLoading, setIsLoading] = useState(true)
 
-  // useEffect(() => {
-  //   async function fetchAPI() {
-  //     try {
-  //       const fetchUrl = `http://127.0.0.1:3000/`
-  //       const res = await fetch(fetchUrl)
-  //       const data = await res.json()
-
-  //       // console.log(data)
-  //       setData(data)
-  //       setIsLoading(false)
-  //     } catch (error) {
-  //       setIsLoading(false)
-  //       console.log("error: ", error)
-  //     }
-  //   }
-  //   fetchAPI()
-  // }, [])
-
-  BackendAPI()
+  let { data, isPending } = BackendAPI()
+  console.log(data)
+  console.log(isPending)
 
   return (
     <Box m="20px">
