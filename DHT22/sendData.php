@@ -3,6 +3,7 @@
 $temperature = $_GET['temp'];
 $lat = $_GET['lat'];
 $long = $_GET['long'];
+$alt = $_GET['alt'];
 $speed = $_GET['speed'];
 
 echo "Temperature: " . $temperature . "   lat: " . $lat. "   long: " . $long. "   speed: " . $speed;    
@@ -20,7 +21,7 @@ $connection = mysqli_connect( $server, $user, "") or die ("Couldn't connect to s
 
 $db = mysqli_select_db( $connection, $database ) or die ( "Couldn't select DB" );
 
-$querry = "INSERT INTO ".$table." (temperature, raceId, latitude, longitude, speed) VALUES (".$temperature.", ".$raceId.",".$lat.", ".$long.", ".$speed.")";
+$querry = "INSERT INTO ".$table." (temperature, raceId, latitude, longitude, altitude, speed) VALUES (".$temperature.",".$raceId.",".$lat.", ".$long.",".$alt.",".$speed.")";
 
 $result = mysqli_query( $connection, $querry);
 
