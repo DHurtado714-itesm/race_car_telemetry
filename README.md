@@ -3,7 +3,7 @@
 Instituto Tecnológico de Estudios Superiores de Monterrey, campus Querétaro \
 Proyecto Integrador de la materia TC1004B.501 - Implementación de Internet de las Cosas
 
-## Profesores:
+## Profesores
 
 Eberth Manjarrez Quintanilla - ISC \
 Rodrigo Sanchez Luna - Mtro \
@@ -12,7 +12,7 @@ Pedro Nájera García - Mtro
 ## Integrantes
 
 Carlos Salguero ~ A00833341 \
-Daniel Hurtado ~ \
+Daniel Hurtado ~ A01707774 \
 Daniel Cajas ~ A01708637 \
 Dante Peréz ~
 

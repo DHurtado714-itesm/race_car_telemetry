@@ -9,10 +9,6 @@ const connection = mySQL.createConnection({
 try {
   connection.connect(() => {
     console.log("Connected to MySQL")
-    /*     connection.query("SELECT * FROM datos", (err, result) => {
-      // if (err) throw err 
-      console.log(result)
-    }) */
   })
 } catch (err) {
   console.log(err)
