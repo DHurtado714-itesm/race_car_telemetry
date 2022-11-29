@@ -4,7 +4,7 @@ const char *ssid = "Cajas";            // SSID
 const char *password = "0123456789";   // Password
 const char *host = "192.168.31.26";    // Server IP
 const int port = 80;                   // Server Port
-const int uploadInterval = 9000;       // Upload Interval
+const int uploadInterval = 900;       // Upload Interval
 String phpDir = "/DHT22/sendData.php"; // Path to sendData.php
 String setupDir = "/DHT22/setup.php";  // Path to setup.php
 unsigned long previousMillis = millis();
@@ -24,7 +24,7 @@ TinyGPS gps;                    // Declaring the object gps
 SoftwareSerial serialgps(4, 5); // Declaring the pin 4 Tx and 3 Rx
 
 // Function prototypes
-void sendData(String, bool show = true);
+void sendData(String, bool show = false);
 void getGPSData(float &, float &, float &, float &, float &, int &);
 
 void setup(void)
