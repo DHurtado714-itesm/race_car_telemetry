@@ -19,12 +19,27 @@ const ScatterPlot = (props) => {
   const options = {
     responsive: true,
     maintainAspectRatio: false,
+
     scales: {
       y: {
         beginAtZero: false,
 
         ticks: {
           stepSize: 1,
+        },
+      },
+    },
+
+    plugins: {
+      legend: {
+        display: false,
+      },
+
+      tooltip: {
+        callbacks: {
+          label: function (context) {
+            return context.dataset.label
+          },
         },
       },
     },
@@ -40,12 +55,62 @@ const ScatterPlot = (props) => {
     ],
   }
 
+  console.log(data)
+
   return (
     <Box
-      // styles
-      styles={{
-        height: "100%",
-        width: "100%",
+      sx={{
+        width: "100",
+        height: "100",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "white",
+
+        "& canvas": {
+          width: "100% !important",
+          height: "100% !important",
+        },
+
+        "& .chartjs-render-monitor": {
+          width: "100% !important",
+          height: "100% !important",
+
+          "& canvas": {
+            width: "100% !important",
+            height: "100% !important",
+          },
+
+          "& .chartjs-size-monitor": {
+            width: "100% !important",
+            height: "100% !important",
+
+            "& canvas": {
+              width: "100% !important",
+              height: "100% !important",
+            },
+          },
+
+          "& .chartjs-size-monitor-expand": {
+            width: "100% !important",
+            height: "100% !important",
+
+            "& canvas": {
+              width: "100% !important",
+              height: "100% !important",
+            },
+          },
+
+          "& .chartjs-size-monitor-shrink": {
+            width: "100% !important",
+            height: "100% !important",
+
+            "& canvas": {
+              width: "100% !important",
+              height: "100% !important",
+            },
+          },
+        },
       }}
     >
       <Scatter options={options} data={data} />

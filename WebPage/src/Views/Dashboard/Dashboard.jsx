@@ -15,8 +15,6 @@ import ScatterPlot from "../../Components/Graphs/ScatterPlot/ScatterPlot"
 // Hooks
 import Time from "../../Hooks/TimeStamp/Time"
 import Weather from "../../Hooks/Weather/Weather"
-import BackendAPI from "../../Hooks/BackendAPI/BackendAPI"
-import DataEntries from "../../Hooks/DataEntries/DataEntries"
 
 // Theme
 import { tokens } from "../../theme"
@@ -26,14 +24,15 @@ import { tokens } from "../../theme"
  * Dashboard component
  * @return {JSX.Element} Dashboard
  */
-const Dashboard = () => {
+const Dashboard = ({
+  longitudeArray,
+  latitudeArray,
+  velocityArray,
+  temperatureArray,
+}) => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)
   const coordinates = []
-
-  let { data, isPending } = BackendAPI()
-  let { longitudeArray, latitudeArray, velocityArray, temperatureArray } =
-    DataEntries(data)
 
   for (let i = 0; i < longitudeArray.length; i++) {
     coordinates.push({
@@ -217,6 +216,9 @@ const Dashboard = () => {
                 Track race length: 2km
               </Typography>
               <Box
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
                 sx={{
                   "@media (max-width: 600px)": {
                     display: "flex",

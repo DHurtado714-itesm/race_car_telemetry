@@ -125,9 +125,11 @@ const CustomSidebar = () => {
                 <Typography variant="h3" color={colors.grey[100]}>
                   Electrum
                 </Typography>
-                <IconButton onClick={toggleSidebar}>
-                  <MenuOutlined />
-                </IconButton>
+                <Box onClick={toggleSidebar}>
+                  <IconButton>
+                    <MenuOutlined />
+                  </IconButton>
+                </Box>
               </Box>
             )}
           </MenuItem>
@@ -179,7 +181,7 @@ const CustomSidebar = () => {
               <SidebarItem
                 key={index}
                 title={option.title}
-                to={option.to}
+                to={option.path}
                 icon={option.icon}
                 selected={selected}
                 setSelected={setSelected}
@@ -201,7 +203,7 @@ const CustomSidebar = () => {
               <SidebarItem
                 key={index}
                 title={option.title}
-                to={option.to}
+                to={option.path}
                 icon={option.icon}
                 selected={selected}
                 setSelected={setSelected}
@@ -223,7 +225,7 @@ const CustomSidebar = () => {
               <SidebarItem
                 key={index}
                 title={option.title}
-                to={option.to}
+                to={option.path}
                 icon={option.icon}
                 selected={selected}
                 setSelected={setSelected}

@@ -28,7 +28,7 @@ export const MainOptions = [
 export const DataValues = [
   {
     title: "Position Graph",
-    path: "/p_graph",
+    path: "/PGraph",
     icon: <MapOutlinedIcon />,
   },
   {
