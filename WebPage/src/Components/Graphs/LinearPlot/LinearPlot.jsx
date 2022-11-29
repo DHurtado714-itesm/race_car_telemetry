@@ -1,4 +1,7 @@
 import React from "react"
+
+import { Box } from "@mui/material"
+
 import { Line } from "react-chartjs-2"
 import {
   Chart as ChartJS,
@@ -57,9 +60,63 @@ const LinearPlot = ({ datasets, labels }) => {
   }
 
   return (
-    <section className="LineChart">
-      <Line data={data} options={options} />
-    </section>
+    <Box
+      sx={{
+        width: "100",
+        height: "100",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "white",
+
+        "& canvas": {
+          width: "100% !important",
+          height: "100% !important",
+        },
+
+        "& .chartjs-render-monitor": {
+          width: "100% !important",
+          height: "100% !important",
+
+          "& canvas": {
+            width: "100% !important",
+            height: "100% !important",
+          },
+
+          "& .chartjs-size-monitor": {
+            width: "100% !important",
+            height: "100% !important",
+
+            "& canvas": {
+              width: "100% !important",
+              height: "100% !important",
+            },
+          },
+
+          "& .chartjs-size-monitor-expand": {
+            width: "100% !important",
+            height: "100% !important",
+
+            "& canvas": {
+              width: "100% !important",
+              height: "100% !important",
+            },
+          },
+
+          "& .chartjs-size-monitor-shrink": {
+            width: "100% !important",
+            height: "100% !important",
+
+            "& canvas": {
+              width: "100% !important",
+              height: "100% !important",
+            },
+          },
+        },
+      }}
+    >
+      <LinearPlot options={options} data={data} />
+    </Box>
   )
 }
 

@@ -3,7 +3,6 @@ import { Box, Typography, useTheme } from "@mui/material"
 
 // Components
 import Header from "../../Components/Header/Header"
-import ScatterPlot from "../../Components/Graphs/ScatterPlot/ScatterPlot"
 
 // Hooks
 import Time from "../../Hooks/TimeStamp/Time"
@@ -18,17 +17,10 @@ import { tokens } from "../../theme"
  * @params {Object} props
  * @returns {JSX.Element} Position Graph view
  */
-const PGraph = ({ longitudeArray, latitudeArray }) => {
+const PositionData = ({ longitudeArray, latitudeArray }) => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)
   const coordinates = []
-
-  for (let i = 0; i < longitudeArray.length; i++) {
-    coordinates.push({
-      x: longitudeArray[i],
-      y: latitudeArray[i],
-    })
-  }
 
   return (
     <Box m="20px" max-height="100vh">
@@ -52,15 +44,13 @@ const PGraph = ({ longitudeArray, latitudeArray }) => {
       {/* Graph element */}
       <Box width="90%">
         <Typography variant="h2" sx={{ color: colors.text }}>
-          Kartodrome, Queretaro
+          Eaw Position Data at Kartodrome, Queretaro
         </Typography>
         <Typography>Track length: 2km</Typography>
-        <Box>
-          <ScatterPlot data={coordinates} />
-        </Box>
+        <Box></Box>
       </Box>
     </Box>
   )
 }
 
-export default PGraph
+export default PositionData

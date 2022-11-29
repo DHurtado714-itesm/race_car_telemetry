@@ -33,35 +33,30 @@ export const DataValues = [
   },
   {
     title: "Speed Data Graph",
-    path: "./speed",
+    path: "/SpeedGraph",
     icon: <SpeedOutlined />,
   },
   {
     title: "Temperature Data Graph",
-    path: "./temperature",
+    path: "/TempGraph",
     icon: <TemperatureOutlined />,
-  },
-  {
-    title: "Race Stats",
-    path: "/stats",
-    icon: <StatsOulined />,
   },
 ]
 
 export const RawValues = [
   {
     title: "Raw Position data",
-    path: "/raw_position",
+    path: "/RawPosition",
     icon: <MapOutlinedIcon />,
   },
   {
     title: "Raw Speed data",
-    path: "/raw_position",
+    path: "/RawSpeed",
     icon: <SpeedOutlined />,
   },
   {
     title: "Raw Temperature data",
-    path: "/raw_position",
+    path: "/RawTemp",
     icon: <TemperatureOutlined />,
   },
 ]

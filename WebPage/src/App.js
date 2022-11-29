@@ -9,9 +9,17 @@ import Topbar from "./Components/Topbar/Topbar"
 import BackendAPI from "./Hooks/BackendAPI/BackendAPI"
 import DataEntries from "./Hooks/DataEntries/DataEntries"
 
-// Views
+// Views (Easy Access)
 import Dashboard from "./Views/Dashboard/Dashboard"
 import Calendar from "./Views/Calendar/Calendar"
+
+// Views (Processed Data)
+import SpeedGraph from "./Views/SpeedGraph/SpeedGraph"
+import TempGraph from "./Views/TempGraph/TempGraph"
+
+// Views (Raw Data)
+import PositionData from "./Views/PositionData/PositionData"
+import SpeedData from "./Views/VelocityData/SpeedData"
 
 // theme
 import { CssBaseline, ThemeProvider } from "@mui/material"
@@ -19,6 +27,8 @@ import { ColorModeContext, useMode } from "./theme"
 
 // styles
 import "./Styles/app.css"
+import PGraph from "./Views/PGraph/PGraph"
+import RawTemp from "./Views/TemperatureData/RawTemp"
 
 /**
  * @brief
@@ -45,6 +55,7 @@ function App() {
             <Topbar isSidebar={isSidebar} setIsSidebar={setIsSidebar} />
 
             <Routes>
+              {/* Easy Access Routes */}
               <Route
                 path="/"
                 element={
@@ -57,6 +68,30 @@ function App() {
                 }
               />
               <Route path="/calendar" element={<Calendar />} />
+
+              {/* Processed Data Graphs */}
+              <Route
+                path="/PGraph"
+                element={
+                  <PGraph
+                    longitudeArray={longitudeArray}
+                    latitudeArray={latitudeArray}
+                  />
+                }
+              />
+              <Route
+                path="/SpeedGraph"
+                element={<SpeedGraph speedArray={velocityArray} />}
+              />
+              <Route
+                path="/TempGraph"
+                element={<TempGraph temperatureArray={temperatureArray} />}
+              />
+
+              {/* Raw Data */}
+              <Route path="/RawPosition" element={<PositionData />} />
+              <Route path="/RawSpeed" element={<SpeedData />} />
+              <Route path="/RawTemp" element={<RawTemp />} />
             </Routes>
           </main>
         </div>

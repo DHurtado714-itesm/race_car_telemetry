@@ -27,6 +27,11 @@ import Weather from "../../Hooks/Weather/Weather"
 // themes
 import { tokens } from "../../theme"
 
+/**
+ * @brief
+ * Renders the Calendar view
+ * @returns {JSX.Element} Calendar view
+ */
 const Calendar = () => {
   const theme = useTheme()
   const colors = tokens(theme.palette.mode)
