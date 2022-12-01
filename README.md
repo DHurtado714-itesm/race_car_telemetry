@@ -13,11 +13,11 @@ Pedro Nájera García - Mtro
 
 Carlos Salguero ~ A00833341
 <br>
-Daniel Hurtado ~
+Daniel Hurtado ~ A01707774
 <br>
-Daniel Cajas ~
+Daniel Cajas ~ A01708637
 <br>
-Dante Pérez ~
+Dante Pérez ~ A01709226
 
 ## Contexto
 
