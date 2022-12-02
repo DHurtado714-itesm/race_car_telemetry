@@ -14,7 +14,7 @@ Pedro Nájera García - Mtro
 Carlos Salguero ~ A00833341 \
 Daniel Hurtado ~ A01707774 \
 Daniel Cajas ~ A01708637 \
-Dante Peréz ~
+Dante Peréz ~ A01709226
 
 ## Contexto
 
@@ -48,8 +48,21 @@ de datos.
 
 ### Correr el programa
 
-Para correr el programa es necesario tener activo la aplicación de Xampp con la base
-de datos del proyecto, iniciar el backend de la app con el siguiente comando
+Para correr el programa localmente hay dos opciones. Descargar el .zip o hacer el siguiente comando
+
+```js
+npx degit https://github.com/salgue441/IOT-WebPage.git .
+```
+
+para correr los paquetes de npm sin tener que instalarlos. Una vez tengas los archivos, abrelos en un editor de texto 
+y haz el siguiente comando
+
+```js
+npm i 
+```
+
+Al tener los archivos y el ambiente listo, para correr el programa es necesario tener activo la aplicación de Xampp con
+la base de datos del proyecto, iniciar el backend de la app con el siguiente comando
 
 ```js
 node index.js
